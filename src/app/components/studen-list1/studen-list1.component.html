@@ -1,0 +1,21 @@
+<p>studen-list1 works!</p>
+<!-- <app-current-student-details1 (saveStudent)="parentSave($event)"></app-current-student-details1> -->
+
+@for(item of listOfStudent; track item)
+{
+    <li>{{item.ID}} {{item.FName}}  </li>
+    <!-- {{item.adrress}} {{item.phone}} {{item.isActive}} {{item.average}} -->
+<button (click)="show(item.ID)">עריכה</button>
+@if(selected==item.ID){
+<app-current-student-details1 (saveStudent)="parentSave($event)" [id]="selected" [list1]="listOfStudent"></app-current-student-details1>
+}
+@if(selected==item.ID && item.isActive==false){
+    {{item.leavingDate}}
+}
+}
+
+<button (click)="add()">add</button>
+@if(selected==-1)
+{
+    <app-current-student-details1 (saveStudent)="parentSave($event)"[id]="0" [list1]="listOfStudent"></app-current-student-details1> 
+}

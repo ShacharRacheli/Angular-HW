@@ -1,0 +1,7 @@
+<p>current-student-details1 works!</p>
+
+<input #id type="number" name="id" placeholder="{{id}}">
+<input #name id="name" type="text" name="full_name" placeholder="{{showDetails().FName}}">
+<input #address type="text" name="adrress" placeholder="{{showDetails().adrress}}">
+<input #average type="number" name="avg" placeholder="{{showDetails().average}}">
+<button (click)="childSave(id.valueAsNumber,name.value,address.value,average.valueAsNumber)">save </button>
