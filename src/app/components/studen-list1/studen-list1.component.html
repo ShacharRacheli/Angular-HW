@@ -1,5 +1,7 @@
 <p>studen-list1 works!</p>
 <!-- <app-current-student-details1 (saveStudent)="parentSave($event)"></app-current-student-details1> -->
+<app-information-popup></app-information-popup>
+<button (click)="del()">delete</button>
 
 @for(item of listOfStudent; track item)
 {
@@ -19,5 +21,3 @@
 {
     <app-current-student-details1 (saveStudent)="parentSave($event)"[id]="0" [list1]="listOfStudent"></app-current-student-details1> 
 }
-<app-information-popup></app-information-popup>
-<button (click)="del()">delete</button>
