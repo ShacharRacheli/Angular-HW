@@ -2,11 +2,12 @@ import { Component, QueryList, ViewChild } from '@angular/core';
 import { Student } from '../../models/Student';
 import { CurrentStudentDetails1Component } from "../current-student-details1/current-student-details1.component";
 import { InformationPopupComponent } from '../information-popup/information-popup.component';
+import { NgTemplateOutlet } from '@angular/common';
 
 @Component({
   selector: 'app-studen-list1',
   standalone: true,
-  imports: [CurrentStudentDetails1Component, InformationPopupComponent],
+  imports: [CurrentStudentDetails1Component, InformationPopupComponent,NgTemplateOutlet],
   templateUrl: './studen-list1.component.html',
   styleUrl: './studen-list1.component.css'
 })

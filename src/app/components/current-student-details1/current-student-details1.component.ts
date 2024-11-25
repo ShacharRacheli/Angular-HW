@@ -1,10 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Student } from '../../models/Student';
+import { NgTemplateOutlet } from '@angular/common';
 
 @Component({
   selector: 'app-current-student-details1',
   standalone: true,
-  imports: [],
+  imports: [NgTemplateOutlet],
   templateUrl: './current-student-details1.component.html',
   styleUrl: './current-student-details1.component.css'
 })

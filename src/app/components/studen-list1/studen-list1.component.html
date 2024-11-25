@@ -1,8 +1,10 @@
 <p>studen-list1 works!</p>
 <!-- <app-current-student-details1 (saveStudent)="parentSave($event)"></app-current-student-details1> -->
 <app-information-popup></app-information-popup>
+<div ngProjectAs="start">List of students-----------</div>
 <button (click)="del()">delete</button>
-
+<ng-container *ngTemplateOutlet="MyList"></ng-container>
+<ng-template #MyList>
 @for(item of listOfStudent; track item)
 {
     <li>{{item.ID}} {{item.FName}}  </li>
@@ -15,9 +17,10 @@
     {{item.leavingDate}}
 }
 }
-
+</ng-template>
 <button (click)="add()">add</button>
 @if(selected==-1)
 {
     <app-current-student-details1 (saveStudent)="parentSave($event)"[id]="0" [list1]="listOfStudent"></app-current-student-details1> 
 }
+<div ngProjectAs="start">List of students-----------</div>
