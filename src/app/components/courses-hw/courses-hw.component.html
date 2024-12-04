@@ -1,0 +1,20 @@
+<p>courses-hw works!</p>
+
+<label for="courseSelect">Select a Course:</label>
+<select id="courseSelect" (change)="selectedCourse($event)">
+    <option *ngFor="let course of courses"
+     [value]="course.NameCourse">
+         {{course.Subject}} -- {{course.NameCourse}}
+    </option>
+</select>
+
+<div>
+@for (item of selectoption; track item) {
+    @if (item.IsPaid) {
+<p appCourse [course1]="item.Subject"> {{item.Subject}} {{item.NameCourse}}</p>
+    }
+    @else {
+<p appCourse [course1]="item.Subject"> {{item.Subject}} {{item.NameCourse}}</p>
+    }
+}
+</div>
