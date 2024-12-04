@@ -2,6 +2,7 @@
 <ng-content select="start"></ng-content>
 <input #id type="number" name="id" placeholder="{{id}}">
 <input #name id="name" type="text" name="full_name" placeholder="{{showDetails().FName}}">
+<input #isPaid type="checkbox" name="iaPaid" [checked]="showDetails().isPaid">
 <input #address type="text" name="adrress" placeholder="{{showDetails().adrress}}">
 <input #average type="number" name="avg" placeholder="{{showDetails().average}}">
-<button (click)="childSave(id.valueAsNumber,name.value,address.value,average.valueAsNumber)">save </button>
+<button (click)="childSave(id.valueAsNumber,name.value,isPaid.checked,address.value,average.valueAsNumber)">save </button>

@@ -10,11 +10,7 @@
 
 <div>
 @for (item of selectoption; track item) {
-    @if (item.IsPaid) {
-<p appCourse [course1]="item.Subject"> {{item.Subject}} {{item.NameCourse}}</p>
-    }
-    @else {
-<p appCourse [course1]="item.Subject"> {{item.Subject}} {{item.NameCourse}}</p>
-    }
+<p style="width: 150px;" appCourse [course1]="item.Subject"> {{item.Subject}} {{item.NameCourse}}</p>
+   
 }
 </div>

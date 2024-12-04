@@ -3,8 +3,11 @@
 <app-information-popup></app-information-popup>
 <div ngProjectAs="start">List of students-----------</div>
 <button (click)="del()">delete</button>
-<ng-container *ngTemplateOutlet="MyList"></ng-container>
-<ng-template #MyList>
+<ng-container *ngTemplateOutlet="beforeListStudent"></ng-container>
+
+<ng-template #beforeListStudent>
+    <p>-----------רשימת תלמידות--------------</p>
+  </ng-template>
 @for(item of listOfStudent; track item)
 {
     <li>{{item.ID}} {{item.FName}}  </li>
@@ -16,8 +19,14 @@
 @if(selected==item.ID && item.isActive==false){
     {{item.leavingDate}}
 }
+@if (selected==item.ID&&item.isPaid==true) {
+    <app-courses-hw></app-courses-hw>
 }
-</ng-template>
+}
+
+<ng-template #beforeListStudent>
+    <p>-----------רשימת תלמידות--------------</p>
+  </ng-template>
 <button (click)="add()">add</button>
 @if(selected==-1)
 {

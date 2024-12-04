@@ -19,9 +19,9 @@ showDetails() {
     let index = this.list1.findIndex(st => st.ID == this.id)
     return this.list1[index];
   }
-  childSave(id:number,name:string,adrress:string,average:number)
+  childSave(id:number,name:string,isPaid:boolean,adrress:string,average:number)
 {
-this.student=new Student(id,name,adrress,average)
+this.student=new Student(id,name,isPaid,adrress,average)
 this.saveStudent.emit(this.student);
 }
 

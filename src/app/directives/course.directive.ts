@@ -14,12 +14,12 @@ export class CourseDirective implements OnInit{
   }
   private colorCourse() {
     const color = this.getColor(this.course1);
-    this.el.nativeElement.style.color = color; // Set the color of the element
+    this.el.nativeElement.style.backgroundColor = color; // Set the color of the element
   }
   private getColor(course: NameCourses): string {
     switch (course) {
       case 'sql':
-        return 'green';
+        return 'darkgreen';
       case 'c':
         return 'pink';
       case 'math':

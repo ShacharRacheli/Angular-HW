@@ -7,7 +7,6 @@ export enum NameCourses{
 export class Courses{
     constructor( public IdCourse:number,
         public NameCourse:string,
-        public Subject:NameCourses,
-        public IsPaid:boolean
+        public Subject:NameCourses
     ){}
 }

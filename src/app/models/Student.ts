@@ -3,6 +3,7 @@ export class Student{
         public ID:number,
         public FName?:string,
         // public LName?:string,  
+        public isPaid?:boolean,
         public adrress?:string,
         public average?:number,
         public phone?:string,
