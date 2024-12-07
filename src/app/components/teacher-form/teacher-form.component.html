@@ -1,0 +1,20 @@
+<p>teacher-form works!</p>
+<form (ngSubmit)="onSubmit()">
+<label for="ID">Teacher's id: </label>
+<input id="ID" [(ngModel)]="teacher.ID" name="ID" required>
+<label for="name">Teacher's name: </label>
+<input id="name" [(ngModel)]="teacher.name" name="name" required>
+<label for="classes">Teacher's classes: </label>
+<input id="classes" [(ngModel)]="teacher.classes" name="classes">
+<button type="submit">Submit</button>
+</form>
+
+
+<div>Teacher's List:</div>
+@for (item of teachersList; track $index) {
+    <div>
+        Teacher's Id:{{item.ID}} Teacher's name:{{item.name}} Teacher's classes:{{item.classes}}
+    </div>
+}
+<input [(ngModel)]="icon" placeholder="enter emotion">
+{{icon|icon}}
