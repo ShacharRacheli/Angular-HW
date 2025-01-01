@@ -1,0 +1,61 @@
+<div class="title">Class Form:</div>
+<form [formGroup]="classForm" (ngSubmit)="onSubmit()">
+<div class="formTag">
+    <label for="ID">Class Id:</label>
+    <input id="ID" formControlName="ID" required>
+@if(f['ID']&&f['ID'].errors&&f['ID'].touched){
+@if(f['ID'].errors['required']){
+<div class="msg-error">id is required</div>
+}
+@if (f['ID'].errors['min']) {
+    <div class="msg-error">Id has to be bigger than 1</div>
+}
+}
+</div>
+
+<div class="formTag">
+    <label for="gradeAndNumber">Class Grade and number:</label>
+    <input id="gradeAndNumber" formControlName="gradeAndNumber" required>
+    @if(f['gradeAndNumber']&&f['gradeAndNumber'].errors&&f['gradeAndNumber'].touched){
+        @if(f['gradeAndNumber'].errors['required']){
+        <div class="msg-error">Grade is required</div>
+        }
+        @if (f['gradeAndNumber'].errors['minlength']) {
+            <div class="msg-error">Grade has to be class and number class</div>
+        }
+        }
+</div>
+<div class="formTag">
+    <label for="teachersName">Teacher's class:</label>
+    <input id="teachersName" formControlName="teachersName" required>
+    @if(f['teachersName']&&f['teachersName'].errors&&f['teachersName'].touched){
+        @if(f['teachersName'].errors['required']){
+        <div class="msg-error">Teacher is required</div>
+        }
+        @if (f['teachersName'].errors['minlength']) {
+            <div class="msg-error">Teacher has to have at least 3 letters</div>
+        }
+        }
+</div>
+<div class="formTag">
+    <label for="students">Number of students in class:</label>
+    <input id="students" formControlName="students" required>
+    @if(f['students']&&f['students'].errors&&f['students'].touched){
+        @if(f['students'].errors['required']){
+        <div class="msg-error">Number of students is required</div>
+        }
+        @if (f['students'].errors['min']||f['students'].errors['max']) {
+            <div class="msg-error">Number of students has to be between 10-40</div>
+        }
+        }
+</div>
+
+<button type="submit" [disabled]="classForm.invalid">Submit</button>
+</form>
+
+@for (item of classList; track $index) {
+ <div> class Id:  {{item.ID}}</div>
+ <div> grade:  {{item.gradeAndNumber}}</div>
+ <div> number of students:  {{item.students}}</div>
+ <div> class teacher:  {{item.teachersName}}</div>
+}
