@@ -6,6 +6,7 @@ import { InformationPopupComponent } from './components/information-popup/inform
 import { StudenList1Component } from './components/studen-list1/studen-list1.component';
 import { AppComponent } from './app.component';
 import { TeacherReactiveFormComponent } from './components/teacher-reactive-form/teacher-reactive-form.component';
+import { TreeCoursesComponent } from './components/tree-courses/tree-courses.component';
 
 export const routes: Routes = [
 
@@ -15,6 +16,8 @@ export const routes: Routes = [
     // {path:'currentStudent',component:CurrentStudentDetails1Component},
     // {path:'information',component:InformationPopupComponent},
     {path:'studentList',component:StudenList1Component},
-    {path:'techearReactiveForm',component:TeacherReactiveFormComponent}
+    {path:'techearReactiveForm',component:TeacherReactiveFormComponent},
+    {path:'TreeCoursesComponent',component:TreeCoursesComponent},
+    
 ];
 

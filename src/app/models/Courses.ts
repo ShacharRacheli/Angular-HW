@@ -7,6 +7,8 @@ export enum NameCourses{
 export class Courses{
     constructor( public IdCourse:number,
         public NameCourse:string,
-        public Subject:NameCourses
+        public Subject:NameCourses,
+        public Semester:number,
+        // public Silabus:string[]
     ){}
 }

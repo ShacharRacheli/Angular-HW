@@ -5,12 +5,13 @@ import { StudenList1Component } from './components/studen-list1/studen-list1.com
 import { CoursesHWComponent } from "./components/courses-hw/courses-hw.component";
 import { TeacherFormComponent } from "./components/teacher-form/teacher-form.component";
 import { IconPipe } from "./pipes/icon.pipe";
+import { TreeCoursesComponent } from './components/tree-courses/tree-courses.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, RouterOutlet, StudenList1Component, CoursesHWComponent, TeacherFormComponent, IconPipe,RouterLink, 
-    RouterLinkActive],
+    RouterLinkActive,TreeCoursesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
