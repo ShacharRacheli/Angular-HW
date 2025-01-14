@@ -7,10 +7,9 @@ import { StudenList1Component } from './components/studen-list1/studen-list1.com
 import { AppComponent } from './app.component';
 import { TeacherReactiveFormComponent } from './components/teacher-reactive-form/teacher-reactive-form.component';
 import { TreeCoursesComponent } from './components/tree-courses/tree-courses.component';
+import { ApiEventComponent } from './components/api-event/api-event.component';
 
 export const routes: Routes = [
-
-    // {path:'',component:AppComponent},
     {path:'teacherForm',component:TeacherFormComponent},
     {path:'courses',component:CoursesHWComponent},
     // {path:'currentStudent',component:CurrentStudentDetails1Component},
@@ -18,6 +17,7 @@ export const routes: Routes = [
     {path:'studentList',component:StudenList1Component},
     {path:'techearReactiveForm',component:TeacherReactiveFormComponent},
     {path:'TreeCoursesComponent',component:TreeCoursesComponent},
+    {path:'ApiEventComponent',component:ApiEventComponent},
     
 ];
 

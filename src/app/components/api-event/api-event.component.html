@@ -1,0 +1,9 @@
+@for(e of (eventService.event$|async);track e){
+    <!-- @for(e of event;track e.Code){ -->
+        <div>
+            {{e | json}}
+        </div>
+}
+@empty {
+    <div>We are working for you....</div>
+}

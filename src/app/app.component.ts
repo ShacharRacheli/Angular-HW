@@ -10,8 +10,8 @@ import { TreeCoursesComponent } from './components/tree-courses/tree-courses.com
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, StudenList1Component, CoursesHWComponent, TeacherFormComponent, IconPipe,RouterLink, 
-    RouterLinkActive,TreeCoursesComponent],
+  imports: [CommonModule, RouterOutlet, StudenList1Component, CoursesHWComponent, TeacherFormComponent, IconPipe, RouterLink,
+    RouterLinkActive],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
