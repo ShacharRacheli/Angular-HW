@@ -11,6 +11,9 @@ import { ApiEventComponent } from './components/api-event/api-event.component';
 import { loginGuard } from './services/guards/login.guard';
 import { LoginComponent } from './components/login/login.component';
 import { AfterLoginComponent } from './components/after-login/after-login.component';
+import { UserLoginComponent } from './components/user-login/user-login.component';
+import { AllUsersComponent } from './components/all-users/all-users.component';
+import { UserDetailsComponent } from './components/user-details/user-details.component';
 export const routes: Routes = [
     {path:'teacherForm',component:TeacherFormComponent},
     {path:'courses',component:CoursesHWComponent},
@@ -30,5 +33,9 @@ export const routes: Routes = [
         canActivate: [loginGuard],
 
     },
+    {path:'UserLogin',component:UserLoginComponent},
+    {path:'allUsers',component:AllUsersComponent},
+    {path:'allUsers/:userId',component:UserDetailsComponent},
+    
 ];
 

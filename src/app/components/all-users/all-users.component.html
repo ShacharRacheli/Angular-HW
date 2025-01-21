@@ -1,0 +1,4 @@
+<p>all-users works!</p>
+@for (user of allUsers; track $index) {
+   <li><a [routerLink]="['/allUsers',user.Id]"> {{user.name}} </a> </li>
+}

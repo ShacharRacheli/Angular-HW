@@ -1,0 +1,11 @@
+<form  (ngSubmit)="onSubmit()">
+    <!-- <input [(ngModel)]="id" type="text" placeholder="user id"/> -->
+    <label for="userId">User's id: </label>
+
+    <input type="number" id="userId" [(ngModel)]="id" name="userId" required>
+
+    <button type="submit" >Login</button>
+</form>
+
+
+{{message}} 
